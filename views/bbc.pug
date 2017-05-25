@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    br
+    h1(align= 'center')= title
+    each xyz in son
+        div(text-align= 'center')
+        .uk-card.uk-card-secondary
+            .uk-card-media-top
+                a(href= xyz.url): img(src= xyz.urlToImage,)
+            |             
+            .uk-card-body
+                a(href= xyz.url): h3.uk-card-title= xyz.title
+                |                 
+                p= xyz.description
+                p= xyz.author
+                p= xyz.publishedAt
+                br 
