@@ -5,9 +5,23 @@ var router = express.Router();
 var art;
 var hin;
 var xyz;
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+
+var yyyy = today.getFullYear();
+if(dd<10){
+    dd='0'+dd;
+} 
+if(mm<10){
+    mm='0'+mm;
+} 
+var today = dd+'/'+mm+'/'+yyyy;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
- res.render('index', { title: 'CaDET' , fullname: 'Cambridge Daily Edition Times'});
+ res.render('index', { title: 'CaDET' , fullname: 'Cambridge Daily Edition Times', date: today});
   next()
 });
 
