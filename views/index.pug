@@ -3,9 +3,10 @@ extends layout
 block content
   br
   br
-  h1(align = 'center') Welcome to #{title}
-  h3(align = 'center')= fullname
-  p(align= 'center')= date
-  p(align= 'center'): a(href = '/toi'): button(class = 'uk-button-secondary uk-button-large') Times of India
-  p(align= 'center'): a(href = '/hin'): button(class = 'uk-button-secondary uk-button-large') The Hindu
-  p(align= 'center'): a(href = '/bbc'): button(class = 'uk-button-secondary uk-button-large') BBC News
+  .uk-width-1-1
+    h1(align = 'center') Welcome to #{title}
+    h3(align = 'center')= fullname
+    p(align= 'center')= date
+    p(align= 'center'): a(href = '/hin'): button(class = 'uk-button-secondary uk-button-large') The Hindu
+    p(align= 'center'): a(href = '/toi'): button(class = 'uk-button-secondary uk-button-large') Times of India
+    p(align= 'center'): a(href = '/bbc'): button(class = 'uk-button-secondary uk-button-large') BBC News
